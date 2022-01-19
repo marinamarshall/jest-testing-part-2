@@ -8,7 +8,14 @@ let game = {
 // reset the game score to zero, clear playerMoves array, clear currentGame array
 function newGame() {
     game.score = 0;
+    game.currentGame = [];
+    game.playerMoves = [];
+    showScore();
 }
 
-module.exports = {game, newGame};
+function showScore() {
+    document.getElementById("score").innerText = game.score;
+}
+
+module.exports = {game, newGame, showScore};
 
