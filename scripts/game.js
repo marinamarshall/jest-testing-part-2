@@ -37,5 +37,10 @@ function lightsOn(circ) {
     }, 400);
 }
 
+function showTurns() {
+    game.turnNumber = 0;
+    let turns = setInterval(() => {})
+}
+
 module.exports = {game, newGame, showScore, addTurn, lightsOn};
 
