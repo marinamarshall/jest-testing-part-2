@@ -67,12 +67,6 @@ describe("newGame works correctly", () => {
     });
 });
 
-describe("addTurn function should add to the sequence", () => {
-    test("addTurn function should add to the sequence", () => {
-        expect()
-    });
-});
-
 describe("gameplay works correctly", () => {
     beforeEach(() => {
         game.score = 0;
@@ -108,5 +102,9 @@ describe("gameplay works correctly", () => {
         game.playerMoves.push("wrong");
         playerTurn();
         expect(window.alert).toBeCalledWith("Wrong move!");
+    });
+    test("should toggle turnInProgress to true", () => {
+        showTurns();
+        expect(game.turnInProgress).toBe(true);
     });
 });
